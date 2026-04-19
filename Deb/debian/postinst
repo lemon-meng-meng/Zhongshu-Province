@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+
+# Install nautilus extension for current user
+mkdir -p ~/.local/share/nautilus-python/extensions
+if [ -f /opt/zhongshu-provinces/nautilus-extension/zhongshu-menu.py ]; then
+    cp /opt/zhongshu-provinces/nautilus-extension/zhongshu-menu.py ~/.local/share/nautilus-python/extensions/
+fi
+
+# Restart nautilus to load extension
+if command -v nautilus &> /dev/null; then
+    nautilus -q 2>/dev/null || true
+fi
+
+exit 0

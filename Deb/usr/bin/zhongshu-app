@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /opt/zhongshu-provinces
+python3 main.py "$@"
