@@ -1,0 +1,4 @@
+#!/bin/bash
+HERE="$(dirname "$(readlink -f "${0}")")"
+cd "$HERE/opt/zhongshu-provinces"
+python3 main.py "$@"
